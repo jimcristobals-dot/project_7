@@ -50,7 +50,7 @@ if "Gráfico de dispersión" in options:
     fig_scatter = px.scatter(car_data, x="odometer", y="price", title='Relación entre kilometraje y precio') 
     st.plotly_chart(fig_scatter, use_container_width=True)
 
-if 'G´rafico de barras' in options:
+if 'Gráfico de barras' in options:
     st.write ('Gráfico de barras para el conjunto de datos de venta de vehículos usados')
     price_type = car_data.groupby("type")["price"].mean().reset_index()
     fig_bar = px.bar(price_type, x="price", y="type", orientation='h',title= 'Tipo de carro y precio promedio')
